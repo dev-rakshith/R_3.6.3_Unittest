@@ -972,6 +972,19 @@
       "Hash": "55e157e2aa88161bdb0754218470d204",
       "Requirements": []
     },
+    "visualTest": {
+      "Package": "visualTest",
+      "Version": "1.0.0",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "visualTest",
+      "RemoteUsername": "MangoTheCat",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "9b835a707479a9162ca50f108308a5d814bbc923",
+      "Hash": "672a6b4d3f80f153386e02143a08ca49",
+      "Requirements": []
+    },
     "waldo": {
       "Package": "waldo",
       "Version": "0.3.1",

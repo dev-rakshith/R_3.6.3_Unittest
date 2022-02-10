@@ -6,6 +6,8 @@
 #Tembo 2.33.0 link: https://artifactory.intra.infineon.com/artifactory/cran-tembo-local/src/contrib/
 
 install.packages(c("Cairo","IRdisplay","png"))
+devtools::install_github("MangoTheCat/visualTest")
+
 renv::restore()
 
 packageVersion("ggplot2")
@@ -134,8 +136,10 @@ find.package("ggplot2")
 #Negotiate commit history
 renv::history()
 
+renv::status()
+
 renv::snapshot()
-#d5d54eb1585b8d14ea18ad5075dd2d55c085859f
+#ggplt 3.3.5 commit: "d5d54eb1585b8d14ea18ad5075dd2d55c085859f"
 
 
 packageVersion("ggplot2")
