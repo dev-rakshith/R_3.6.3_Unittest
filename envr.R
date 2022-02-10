@@ -135,7 +135,7 @@ find.package("ggplot2")
 
 #Negotiate commit history
 renv::history()
-#ggplot 3.3.5 commit: "d5d54eb1585b8d14ea18ad5075dd2d55c085859f"
+#ggplot 3.3.5 commit: "59c2a8578fbd19d7386fdb22344fbd1f90d0ee85"
 #ggplot 3.0.0 commit: " 4c480db47b0d02b65a1d0cf2ab27a80f4ec9ef34"
 
 renv::status()
@@ -146,7 +146,7 @@ packageVersion("ggplot2")
 
 
 devtools::install_version("ggplot2", version="3.0.0")
-devtools::load_all("/Users/zer0/AppData/Local/Temp/Rtmpyy2Rwq/downloaded_packages/ggplot2_3.0.0.tar.gz")
+#z,devtools::load_all("/Users/z/AppData/Local/Temp/Rtmpyy2Rwq/downloaded_packages/ggplot2_3.0.0.tar.gz")
 packageVersion("ggplot2")
 
 #If older version is associated with this commit(3.0.0)
@@ -174,13 +174,19 @@ dev.off()
 
 #If newer version is associated with this commit(3.3.5)
 #Restore the environment
-#Restore the commit 
-#Or edit renv lockfile and replace ggplot 2 version 3.0.0 with 3.3.5
+#Revert from the commit 
+#Restore renv lockfile and replace ggplot 2 version 3.0.0 with 3.3.5.
 renv::revert(commit="e1900161bc1f581139ea152cabdbc0e71dd46e9b")
 renv::restore()
 
-#Version upgraded
+#Check upgraded version
 packageVersion("ggplot2")
+
+#Record ggplot 3.3.5 commit
+renv::snapshot()
+
+#While restoring needed dependencies are also updated.
+renv::restore()
 
 #After upgrading to ggplot 3.3.5, run the scripts for XYplot & boxplot again
 
