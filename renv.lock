@@ -333,20 +333,22 @@
     },
     "ggplot2": {
       "Package": "ggplot2",
-      "Version": "3.3.5",
+      "Version": "3.0.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "d7566c471c7b17e095dd023b9ef155ad",
+      "Hash": "a6d73053a588981f082f095592c93050",
       "Requirements": [
         "MASS",
         "digest",
-        "glue",
         "gtable",
-        "isoband",
+        "lazyeval",
         "mgcv",
+        "plyr",
+        "reshape2",
         "rlang",
         "scales",
         "tibble",
+        "viridisLite",
         "withr"
       ]
     },
@@ -420,14 +422,6 @@
       "Hash": "6154ec2223172bce8162d4153cda21f7",
       "Requirements": []
     },
-    "isoband": {
-      "Package": "isoband",
-      "Version": "0.2.5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "7ab57a6de7f48a8dc84910d1eca42883",
-      "Requirements": []
-    },
     "jsonlite": {
       "Package": "jsonlite",
       "Version": "1.7.3",
@@ -464,6 +458,14 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "848f8c593fd1050371042d18d152e3d7",
+      "Requirements": []
+    },
+    "lazyeval": {
+      "Package": "lazyeval",
+      "Version": "0.2.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "d908914ae53b04d4c0c0fd72ecc35370",
       "Requirements": []
     },
     "lifecycle": {
@@ -604,6 +606,16 @@
         "withr"
       ]
     },
+    "plyr": {
+      "Package": "plyr",
+      "Version": "1.8.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ec0e5ab4e5f851f6ef32cd1d1984957f",
+      "Requirements": [
+        "Rcpp"
+      ]
+    },
     "praise": {
       "Package": "praise",
       "Version": "1.0.0",
@@ -704,6 +716,18 @@
       "Repository": "CRAN",
       "Hash": "c38694b67e7f7091f7d073b3766258cc",
       "Requirements": []
+    },
+    "reshape2": {
+      "Package": "reshape2",
+      "Version": "1.4.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "bb5996d0bd962d214a11140d77589917",
+      "Requirements": [
+        "Rcpp",
+        "plyr",
+        "stringr"
+      ]
     },
     "rlang": {
       "Package": "rlang",
@@ -821,8 +845,8 @@
       "Version": "2.33.0",
       "Source": "URL",
       "RemoteType": "url",
-      "RemoteUrl": "https://artifactory.intra.infineon.com/artifactory/cran-tembo-local/src/contrib/tembo_2.33.0.tar.gz",
-      "Hash": "6e42d94db944957317d01e2c49319381",
+      "RemoteUrl": "https://github.com/dev-rakshith/tembo/raw/main/tembo_2.33.0.tar.gz",
+      "Hash": "d28f4bbddd574f5008e3ddc553ce5272",
       "Requirements": [
         "Rcpp",
         "data.table",

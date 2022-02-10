@@ -120,15 +120,33 @@ if(exists("currentTableHtml")){
 
 
 #----Downgrade dependency package version----
-packageVersion("ggplot2")
 devtools::unload("ggplot2")
 
-find.package("ggplot2")
+# Edit renv lockfile and replace version "3.3.5" into "3.0.0" 
+# Restart R
+
 packageVersion("ggplot2")
+#remove.packages("ggplot2")
+
+find.package("ggplot2")
+#packageVersion("ggplot2")
 
 #Negotiate commit history
 renv::history()
 
+renv::snapshot()
+#d5d54eb1585b8d14ea18ad5075dd2d55c085859f
+
+
+packageVersion("ggplot2")
+
+#Install ggplot 3.0.0 dependencies
+install.packages("plyr", "reshape2")
+
+devtools::install_version("ggplot2", version="3.0.0")
+#install.packages("https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_3.0.0.tar.gz", repos = NULL)
+devtools::load_all("/Users/zer0/AppData/Local/Temp/Rtmpyy2Rwq/downloaded_packages/ggplot2_3.0.0.tar.gz")
+packageVersion("ggplot2")
 #If older version is associated with this commit(3.0.0)
 renv::revert(commit="fec757cee728802800bac382e055f79a4b2f4a1d")
 renv::restore()
